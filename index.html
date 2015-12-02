@@ -1,369 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-	<style>
-	@font-face
-		{font-family:Calibri;
-		panose-1:2 15 5 2 2 2 4 3 2 4;
-		mso-font-charset:0;
-		mso-generic-font-family:swiss;
-		mso-font-pitch:variable;
-		mso-font-signature:-536870145 1073786111 1 0 415 0;}
-	/* Style Definitions */
-	p.MsoNormal, li.MsoNormal, div.MsoNormal
-		{mso-style-unhide:no;
-		mso-style-qformat:yes;
-		mso-style-parent:"";
-		margin-top:2.0pt;
-		margin-right:0in;
-		margin-bottom:8.0pt;
-		margin-left:0in;
-		line-height:120%;
-		mso-pagination:widow-orphan;
-		font-size:10.0pt;
-		font-family:"Calibri",sans-serif;
-		mso-ascii-font-family:Calibri;
-		mso-ascii-theme-font:minor-latin;
-		mso-fareast-font-family:"Times New Roman";
-		mso-fareast-theme-font:minor-fareast;
-		mso-hansi-font-family:Calibri;
-		mso-hansi-theme-font:minor-latin;
-		mso-bidi-font-family:"Times New Roman";
-		mso-bidi-theme-font:minor-bidi;
-		color:#595959;
-		mso-themecolor:text1;
-		mso-themetint:166;
-		mso-font-kerning:10.0pt;
-		mso-fareast-language:JA;}
-	h1
-		{mso-style-qformat:yes;
-		mso-style-next:Normal;
-		margin-top:2.0pt;
-		margin-right:0in;
-		margin-bottom:8.0pt;
-		margin-left:0in;
-		text-align:right;
-		line-height:120%;
-		mso-pagination:widow-orphan;
-		mso-outline-level:1;
-		font-size:10.5pt;
-		font-family:"Calibri",sans-serif;
-		mso-ascii-font-family:Calibri;
-		mso-ascii-theme-font:major-latin;
-		mso-fareast-font-family:"Times New Roman";
-		mso-fareast-theme-font:major-fareast;
-		mso-hansi-font-family:Calibri;
-		mso-hansi-theme-font:major-latin;
-		mso-bidi-font-family:"Times New Roman";
-		mso-bidi-theme-font:major-bidi;
-		color:#5C2D91;
-		mso-themecolor:accent1;
-		text-transform:uppercase;
-		mso-font-kerning:10.0pt;
-		mso-fareast-language:JA;
-		font-weight:normal;}
-	h2
-		{mso-style-qformat:yes;
-		mso-style-next:Normal;
-		margin-top:2.0pt;
-		margin-right:0in;
-		margin-bottom:2.0pt;
-		margin-left:0in;
-		line-height:120%;
-		mso-pagination:widow-orphan lines-together;
-		page-break-after:avoid;
-		mso-outline-level:2;
-		font-size:10.0pt;
-		font-family:"Calibri",sans-serif;
-		mso-ascii-font-family:Calibri;
-		mso-ascii-theme-font:major-latin;
-		mso-fareast-font-family:"Times New Roman";
-		mso-fareast-theme-font:major-fareast;
-		mso-hansi-font-family:Calibri;
-		mso-hansi-theme-font:major-latin;
-		mso-bidi-font-family:"Times New Roman";
-		mso-bidi-theme-font:major-bidi;
-		color:#404040;
-		mso-themecolor:text1;
-		mso-themetint:191;
-		text-transform:uppercase;
-		mso-font-kerning:10.0pt;
-		mso-ligatures:standardcontextual;
-		mso-fareast-language:JA;}
-	p.ResumeText, li.ResumeText, div.ResumeText
-		{mso-style-name:"Resume Text";
-		mso-style-unhide:no;
-		mso-style-qformat:yes;
-		margin-top:2.0pt;
-		margin-right:1.0in;
-		margin-bottom:2.0pt;
-		margin-left:0in;
-		line-height:120%;
-		mso-pagination:widow-orphan;
-		font-size:10.0pt;
-		font-family:"Calibri",sans-serif;
-		mso-ascii-font-family:Calibri;
-		mso-ascii-theme-font:minor-latin;
-		mso-fareast-font-family:"Times New Roman";
-		mso-fareast-theme-font:minor-fareast;
-		mso-hansi-font-family:Calibri;
-		mso-hansi-theme-font:minor-latin;
-		mso-bidi-font-family:"Times New Roman";
-		mso-bidi-theme-font:minor-bidi;
-		color:#595959;
-		mso-themecolor:text1;
-		mso-themetint:166;
-		mso-font-kerning:10.0pt;
-		mso-fareast-language:JA;}
-	p.ContactInfo, li.ContactInfo, div.ContactInfo
-		{mso-style-name:"Contact Info";
-		mso-style-unhide:no;
-		mso-style-qformat:yes;
-		margin-top:2.0pt;
-		margin-right:0in;
-		margin-bottom:0in;
-		margin-left:0in;
-		margin-bottom:.0001pt;
-		text-align:right;
-		mso-pagination:widow-orphan;
-		font-size:9.0pt;
-		font-family:"Calibri",sans-serif;
-		mso-ascii-font-family:Calibri;
-		mso-ascii-theme-font:minor-latin;
-		mso-fareast-font-family:"Times New Roman";
-		mso-fareast-theme-font:minor-fareast;
-		mso-hansi-font-family:Calibri;
-		mso-hansi-theme-font:minor-latin;
-		mso-bidi-font-family:"Times New Roman";
-		mso-bidi-theme-font:minor-bidi;
-		color:#595959;
-		mso-themecolor:text1;
-		mso-themetint:166;
-		mso-font-kerning:10.0pt;
-		mso-fareast-language:JA;}
-	p.Name, li.Name, div.Name
-		{mso-style-name:Name;
-		mso-style-unhide:no;
-		mso-style-qformat:yes;
-		mso-style-next:Normal;
-		margin-top:12.0pt;
-		margin-right:.1in;
-		margin-bottom:8.0pt;
-		margin-left:.1in;
-		line-height:120%;
-		mso-pagination:widow-orphan;
-		background:#5C2D91;
-		mso-background-themecolor:accent1;
-		border:none;
-		mso-border-alt:solid #5C2D91 .5pt;
-		mso-border-themecolor:accent1;
-		padding:0in;
-		mso-padding-alt:4.0pt 6.0pt 4.0pt 6.0pt;
-		font-size:16.0pt;
-		font-family:"Calibri",sans-serif;
-		mso-ascii-font-family:Calibri;
-		mso-ascii-theme-font:major-latin;
-		mso-fareast-font-family:"Times New Roman";
-		mso-fareast-theme-font:major-fareast;
-		mso-hansi-font-family:Calibri;
-		mso-hansi-theme-font:major-latin;
-		mso-bidi-font-family:"Times New Roman";
-		mso-bidi-theme-font:major-bidi;
-		color:white;
-		mso-themecolor:background1;
-		text-transform:uppercase;
-		mso-font-kerning:10.0pt;
-		mso-fareast-language:JA;}
-	</style>
+
+	<title>The Resume of Muhamad Iqbal</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+
 </head>
 <body>
-	<p class=ContactInfo>
-		https://www.imaginecup.com
-	</p>
 
-	<p class=ContactInfo>
- 	<a href="">
- 		muhamadiqbal@live.co.uk
- 	</a>
-	</p>
+<div id="doc2" class="yui-t7">
+	<div id="inner">
+	
+		<div id="hd">
+			<div class="yui-gc">
+				<div class="yui-u first">
+					<h1>Muhamad Iqbal</h1>
+					<h2>Programmer, Bookworm</h2>
+				</div>
 
-	<p class=ContactInfo>
-		1 Microsoft Way, Redmond
+				<div class="yui-u">
+					<div class="contact-info">
+						<!--<h3><a id="pdf" href="#">Download PDF</a></h3>-->
+						<h3><a href="mailto:muhamadiqbal@live.co.uk">muhamadiqbal@live.co.uk</a></h3>
+						<h3>(+62) 812-198-69445</h3>
+					</div><!--// .contact-info -->
+				</div>
+			</div><!--// .yui-gc -->
+		</div><!--// hd -->
 
-	<p class=ContactInfo>
-		USA
-	</p>
+		<div id="bd">
+			<div id="yui-main">
+				<div class="yui-b">
 
-	<div style='mso-element:para-border-div;border:solid #5C2D91 1.0pt;mso-border-themecolor:accent1;mso-border-alt:solid #5C2D91 .5pt;
- mso-border-themecolor:accent1;padding:4.0pt 6.0pt 4.0pt 6.0pt;background:#5C2D91;mso-background-themecolor:accent1;margin-left:.1in;margin-right:.1in'>
-	<p class=Name>
-		Muhamad Iqbal
-	</p>
-	</div>
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Profile</h2>
+						</div>
+						<div class="yui-u">
+							<p class="enlarge">
+								A guy who interested in programming and developing apps. Currently interested in Microsoft technologies, IoT, and computer stuff. Also interested in cloud services, such as Microsoft Azure. Likes reading and listening music.
+							</p>
+						</div>
+					</div><!--// .yui-gf -->
 
-	<table class=ResumeTable border=0 cellspacing=0 cellpadding=0 title="Resume text" summary=Resume width="100%" style='width:100.0%;border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:.1in 0in .1in 0in'>
- 	<td width=119 valign=top style='width:88.9pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  		<h1>
-  		Objective
-  		</h1>
- 	</td>
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Skills</h2>
+						</div>
+						<div class="yui-u">
 
-	<td width=31 valign=top style='width:23.6pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-	</td>
+								<div class="talent">
+									<h2>App Development Fundamentals</h2>
+									<p>Currently studying Universal Windows Platform (UWP) app development.	</p>
+								</div>
 
-	<td width=522 valign=top style='width:391.5pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-		<p class=MsoNormal>
-			I am dreaming to become an app developer, creating apps (or maybe games). Also, I am working to learn more about IoT
-		</p>
-		<p class=MsoNormal>
-			Hi, I'm Muhamad Iqbal. A normal university student currently at my last year. 
-			I reside in Indonesia, currently majoring in Computer Engineering at Gunadarma University  
-		</p>
-		<p class=MsoNormal>
-		</p>
-	</td>
+								<div class="talent">
+									<h2>Database Fundamentals</h2>
+									<p>From queries to records.	From tables to views. Having experience in delivering database fundamentals courses</p>
+								</div>
 
-	<tr style='mso-yfti-irow:1'>
-  		<td width=119 valign=top style='width:88.9pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  		<h1>
-  			Professional Achievements
-  		</h1>
-  		</td>
-  		<td width=31 valign=top style='width:23.6pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  		</td>
-  		<td width=522 valign=top style='width:391.5pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-		<span style='font-size:10.0pt;line-height:120%;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;mso-font-kerning:10.0pt;mso-ansi-language:EN-US;mso-fareast-language:JA;mso-bidi-language:AR-SA'>
-		</span>
-		<h2>
-		<span style='color:#404040;mso-themecolor:text1;mso-themetint:191'>
-			Microsoft Certified Professionals - Microsoft Technology Associate (MTA) Level
-		</span>
-		</h2>
-    	<p class=ResumeText>
-    		MTA - Windows Development Fundamentals 
-    	</p>
-   		<p class=ResumeText>
-    		MTA - Database Fundamentals
-    	</p>
-    	<p class=ResumeText>
-    		MTA - HTML5 Application Development Fundamentals
-    	</p>
-  		<span style='font-size:10.0pt;line-height:120%;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;mso-font-kerning:10.0pt;mso-ansi-language:EN-US;mso-fareast-language:JA;mso-bidi-language:AR-SA'>
-  		</span>
-  		<h2>
-		</td>
- </tr>
+								<div class="talent">
+									<h2>Web Development Fundamentals</h2>
+									<p>Have basic knowledge in Web design and JavaScript programming. Also a little knowledge in CSS3.</p>
+								</div>
+						</div>
+					</div><!--// .yui-gf -->
 
-<tr style='mso-yfti-irow:2'>
-  <td width=119 valign=top style='width:88.9pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  	<h1>
-  		Skills
-  	</h1>
-  </td>
-  <td width=31 valign=top style='width:23.6pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  </td>
-  <td width=522 valign=top style='width:391.5pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;
-  mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  	<span style='font-size:10.0pt;line-height:120%;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;mso-font-kerning:10.0pt;mso-ansi-language:EN-US;mso-fareast-language:JA;mso-bidi-language:AR-SA'>
-  	<p class=ResumeText>
-  		C# and XAML (currently studying Universal Windows Platform)
-  	</p>
-    <p class=ResumeText>
-    	HTML5 and CSS
-    </p>
-	<p class=ResumeText>
-    	Azure Web Development
-    </p>
-	<p class=ResumeText>
-    	Database (SQL Server and Oracle Database 11g)
-    </p>
-    <p class=ResumeText>
-    	Javascript
-    </p>
-    <p class=ResumeText>
-    	Basic OOP (Object-Oriented Programming) 
-    </p>
-  </td>
- </tr>
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Languages</h2>
+						</div>
+						<div class="yui-u">
+							<ul class="talent">
+								<li>HTML5</li>
+								<li>CSS3</li>
+								<li class="last">Javascript</li>
+							</ul>
 
-<tr style='mso-yfti-irow:3'>
-  <td width=119 valign=top style='width:88.9pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  	<h1>
-  		Work History
-  	</h1>
-  </td>
-  <td width=31 valign=top style='width:23.6pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  	<p class=MsoNormal>
-  	</p>
-  </td>
-  <td width=522 valign=top style='width:391.5pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;
-  mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  	<span style='font-size:10.0pt;line-height:120%;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;mso-font-kerning:10.0pt;mso-ansi-language:EN-US;mso-fareast-language:JA;mso-bidi-language:AR-SA'>
-  	</span>
-     <h2>
-     	Instructor, LearnIT Gunadarma University
-     </h2>
-    <p class=ResumeText>
-    	August 2014 - now
-    </p>
-    <p class=ResumeText>
-    	Delivering courses (especially MTA courses), and module coordinator for Oracle Database
-    </p>
-	<br />
-	<h2>
-     	Partners, Microsoft Student Partners Indonesia
-     </h2>
-    <p class=ResumeText>
-    	September 2015 - now
-    </p>
-    <p class=ResumeText>
-    	Currently enrolled as MSP for Gunadarma University for Microsoft Student Partners FY15
-    </p>
+							<ul class="talent">
+								<li>C#</li>
+								<li>XAML</li>
+								<li class="last">CVS / Git</li>
+							</ul>
 
-<tr style='mso-yfti-irow:4'>
-  <td width=119 valign=top style='width:88.9pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  <h1>
-  	Education
-  </h1>
-  </td>
-  <td width=31 valign=top style='width:23.6pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'>
-  </td>
-  <td width=522 valign=top style='width:391.5pt;border:none;border-bottom:solid #5C2D91 1.0pt;mso-border-bottom-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-top-alt:solid #5C2D91 .5pt;mso-border-top-themecolor:accent1;mso-border-bottom-alt:solid #5C2D91 .5pt;mso-border-bottom-themecolor:accent1;padding:.1in 0in .1in 0in'><span style='font-size:10.0pt;line-height:120%;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;mso-font-kerning:10.0pt;mso-ansi-language:EN-US;mso-fareast-language:JA;mso-bidi-language:AR-SA'>
-  </span>
-     <h2>
-     	Gunadarma University, Depok, 2012 - now
-     </h2>
-     <p class=MsoNormal>
-     	GPA: -
-     </p>
+							<ul class="talent">
+								<li>SQL Server</li>
+								<li>Oracle SQL Server</li>
+								<li class="last">Hardware/Interfacing (Assembly/Pascal/C++)</li>
+							</ul>
+						</div>
+					</div><!--// .yui-gf-->
 
-     <p class=MsoNormal>
-     	Currently majoring in Computer Engineering
-     </p>
-	 <br />
-	 <h2>
-     	SMAN 5 Bekasi (#5 National Senior High School of Bekasi), West Java, 2009 - 2012
-     </h2>
-     <p class=MsoNormal>
-     	GPA: -
-     </p>
+					<div class="yui-gf">
+	
+						<div class="yui-u first">
+							<h2>Experience</h2>
+						</div><!--// .yui-u -->
 
-     <p class=MsoNormal>
-     	Studied under Science provision
-     </p>
-	 <br />
-	 <h2>
-     	SMP Labs School Kaizen (Labs School Kaizen Junior High School, Kab. Bogor, 2009 - 2007
-     </h2>
-     <p class=MsoNormal>
-     	GPA: -
-     </p>
- </td>
- </tr>
+						<div class="yui-u">
 
-</table>
+							<div class="job">
+								<h2>Microsoft</h2>
+								<h3>Microsoft Student Partner Indonesia - Gunadarma University</h3>
+								<h4>2015-now</h4>
+								<p>Joining the program since September 2015 for MSP FY15. Interested in Windows' app development, IoT in Microsoft, and Windows 10</p>
+							</div>
 
-</div>
+							<div class="job last">
+								<h2>LearnIT - Gunadarma University</h2>
+								<h3>Instructor and Module Coordinator for Oracle SQL Database 11g</h3>
+								<h4>2014-now</h4>
+								<p>Delivering (and also sometimes assisting) courses such as Oracle and MTA. Currently the coordinator for Oracle module, Oracle Database 11g Fundamentals</p>
+							</div>
+
+						</div><!--// .yui-u -->
+					</div><!--// .yui-gf -->
+
+
+					<div class="yui-gf last">
+						<div class="yui-u first">
+							<h2>Education</h2>
+						</div>
+						<div class="yui-u">
+							
+							<div class="job">
+								<h2>Gunadarma University - Depok, West Java</h2>
+								<h3>Majoring in Computer Engineering &mdash; <strong>3.76 GPA (as of 11/30/2015)</strong></h3>
+								<h4>2012-now</h4>
+							</div>
+							<div class="job">
+								<h2>SMAN 5 Bekasi - Bekasi, West Java</h2>
+								<h3>Studied under Science field &mdash; <strong>3.2 GPA</strong></h3>
+								<h4>2008-2012</h4>
+							</div>
+						</div>
+					</div><!--// .yui-gf -->
+
+				</div><!--// .yui-b -->
+			</div><!--// yui-main -->
+		</div><!--// bd -->
+
+		<div id="ft">
+			<p>Muhamad Iqbal &mdash; <a href="mailto:muhamadiqbal@live.co.uk">muhamadiqbal@live.co.uk</a> &mdash; (+62) 812-198-69445</p>
+		</div><!--// footer -->
+
+	</div><!-- // inner -->
+
+
+</div><!--// doc -->
+
 
 </body>
-
 </html>
